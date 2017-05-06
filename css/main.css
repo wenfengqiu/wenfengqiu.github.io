@@ -1,43 +1,156 @@
 body {
     margin: 60px auto;
-    width: 70%;
+    width: 80%;
 }
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
+
+footer {
+    margin-top: 20px;
+    border-top: 1px solid #d5d5d5;
 }
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
+
 p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
+nav ul,
+footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
     list-style: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+nav ul li,
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #999999;
+    padding: 10px;
+    vertical-align: middle;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+}
+
+a:hover {
+    color: white;
+    background-color: #999999;
+}
+
+i {
+    vertical-align: middle;
+}
+
+
+/* Pixel Font */
+
+@font-face {
+    font-family: 'pixel-font';
+    src:  url('fonts/pixel-font.eot?cndky0');
+    src:  url('fonts/pixel-font.eot?cndky0#iefix') format('embedded-opentype'),
+    url('fonts/pixel-font.ttf?cndky0') format('truetype'),
+    url('fonts/pixel-font.woff?cndky0') format('woff'),
+    url('fonts/pixel-font.svg?cndky0#pixel-font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="pixel-font-"], [class*=" pixel-font-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'pixel-font' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pixel-font-A:before {
+    content: "\41";
+}
+.pixel-font-B:before {
+    content: "\42";
+}
+.pixel-font-C:before {
+    content: "\43";
+}
+.pixel-font-D:before {
+    content: "\44";
+}
+.pixel-font-E:before {
+    content: "\45";
+}
+.pixel-font-F:before {
+    content: "\46";
+}
+.pixel-font-G:before {
+    content: "\47";
+}
+.pixel-font-H:before {
+    content: "\48";
+}
+.pixel-font-I:before {
+    content: "\49";
+}
+.pixel-font-J:before {
+    content: "\4a";
+}
+.pixel-font-K:before {
+    content: "\4b";
+}
+.pixel-font-L:before {
+    content: "\4c";
+}
+.pixel-font-M:before {
+    content: "\4d";
+}
+.pixel-font-N:before {
+    content: "\4e";
+}
+.pixel-font-O:before {
+    content: "\4f";
+}
+.pixel-font-P:before {
+    content: "\50";
+}
+.pixel-font-Q:before {
+    content: "\51";
+}
+.pixel-font-R:before {
+    content: "\52";
+}
+.pixel-font-S:before {
+    content: "\53";
+}
+.pixel-font-T:before {
+    content: "\54";
+}
+.pixel-font-U:before {
+    content: "\55";
+}
+.pixel-font-V:before {
+    content: "\56";
+}
+.pixel-font-W:before {
+    content: "\57";
+}
+.pixel-font-X:before {
+    content: "\58";
+}
+.pixel-font-Y:before {
+    content: "\59";
+}
+.pixel-font-Z:before {
+    content: "\5a";
 }
