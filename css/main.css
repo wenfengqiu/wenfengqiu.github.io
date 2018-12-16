@@ -6,6 +6,10 @@ body {
 footer {
     margin-top: 20px;
     border-top: 1px solid #d5d5d5;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 p {
@@ -47,6 +51,30 @@ i {
     vertical-align: middle;
 }
 
+.subtitle-working-papers {
+    padding: 30px 10px 30px 10px;
+}
+
+.subtitle-work-in-progress {
+    padding: 100px 10px 30px 10px;
+}
+
+.paper-details {
+    vertical-align: bottom;
+    line-height: 22px;
+}
+
+a.paper-url {
+    color: #999999;
+    vertical-align: bottom;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+a.paper-url:hover {
+    color: white;
+    background-color: #999999;
+}
 
 /* Pixel Font */
 

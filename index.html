@@ -6,53 +6,101 @@
     <link rel="icon" href="img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.min.css">
-    <!--<script src="lib/angular.min.js"></script>-->
-    <!--<script src="js/main.js"></script>-->
+    <script src="lib/angular.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
-<nav>
-    <ul>
-        <li>
-            <a>
-                <i class="pixel-font-H" style="color: blue"></i>
-                <i class="pixel-font-O" style="color: green"></i>
-                <i class="pixel-font-M" style="color: purple"></i>
-                <i class="pixel-font-E" style="color: red"></i>
-            </a>
-        </li>
-        <li>
-            <a href="/about">
-                <i class="pixel-font-R"></i>
-                <i class="pixel-font-E"></i>
-                <i class="pixel-font-S"></i>
-                <i class="pixel-font-E"></i>
-                <i class="pixel-font-A"></i>
-                <i class="pixel-font-R"></i>
-                <i class="pixel-font-C"></i>
-                <i class="pixel-font-H"></i>
-            </a>
-        </li>
-        <li>
-            <a href="/cv">
-                <i class="pixel-font-C"></i>
-                <i class="pixel-font-V"></i>
-            </a>
-        </li>
-        <li>
-            <a href="/about">
-                <i class="pixel-font-A"></i>
-                <i class="pixel-font-B"></i>
-                <i class="pixel-font-O"></i>
-                <i class="pixel-font-U"></i>
-                <i class="pixel-font-T"></i>
-            </a>
-        </li>
-
-    </ul>
-</nav>
-<div class="container">
-    <div>
+<div class="container" ng-app="personalWeb" ng-controller="mainCtrl">
+    <nav>
+        <ul>
+            <li>
+                <a href="#" ng-click="current = ''">
+                    <i class="pixel-font-H" style="color: dodgerblue"></i>
+                    <i class="pixel-font-O" style="color: green"></i>
+                    <i class="pixel-font-M" style="color: purple"></i>
+                    <i class="pixel-font-E" style="color: red"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" ng-click="current = 'research'">
+                    <i class="pixel-font-R"></i>
+                    <i class="pixel-font-E"></i>
+                    <i class="pixel-font-S"></i>
+                    <i class="pixel-font-E"></i>
+                    <i class="pixel-font-A"></i>
+                    <i class="pixel-font-R"></i>
+                    <i class="pixel-font-C"></i>
+                    <i class="pixel-font-H"></i>
+                </a>
+            </li>
+            <li>
+                <a href="docs/pdf/paper1.pdf" target="_blank">
+                    <i class="pixel-font-C"></i>
+                    <i class="pixel-font-V"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" ng-click="current = 'about'">
+                    <i class="pixel-font-A"></i>
+                    <i class="pixel-font-B"></i>
+                    <i class="pixel-font-O"></i>
+                    <i class="pixel-font-U"></i>
+                    <i class="pixel-font-T"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div ng-if="!current">
         <img src="img/snc.jpg">
+    </div>
+    <div ng-if="current === 'research'">
+        <div class="subtitle-working-papers">
+            <i class="pixel-font-W"></i>
+            <i class="pixel-font-O"></i>
+            <i class="pixel-font-R"></i>
+            <i class="pixel-font-K"></i>
+            <i class="pixel-font-I"></i>
+            <i class="pixel-font-N"></i>
+            <i class="pixel-font-G"></i>
+            &nbsp;
+            &nbsp;
+            <i class="pixel-font-P"></i>
+            <i class="pixel-font-A"></i>
+            <i class="pixel-font-P"></i>
+            <i class="pixel-font-E"></i>
+            <i class="pixel-font-R"></i>
+            <i class="pixel-font-S"></i>
+        </div>
+        <div>
+            <ul style="list-style:square">
+                <li class="paper-details">
+                    <a href="docs/pdf/paper1.pdf" target="_blank" class="paper-url">Paper Title 1</a> (with Luqi Yan)
+                </li>
+            </ul>
+        </div>
+        <div class="subtitle-work-in-progress">
+            <i class="pixel-font-W"></i>
+            <i class="pixel-font-O"></i>
+            <i class="pixel-font-R"></i>
+            <i class="pixel-font-K"></i>
+            &nbsp;
+            &nbsp;
+            <i class="pixel-font-I"></i>
+            <i class="pixel-font-N"></i>
+            &nbsp;
+            &nbsp;
+            <i class="pixel-font-P"></i>
+            <i class="pixel-font-R"></i>
+            <i class="pixel-font-O"></i>
+            <i class="pixel-font-G"></i>
+            <i class="pixel-font-R"></i>
+            <i class="pixel-font-E"></i>
+            <i class="pixel-font-S"></i>
+            <i class="pixel-font-S"></i>
+        </div>
+    </div>
+    <div ng-if="current === 'about'">
+        <h3>About</h3>
     </div>
 </div>
 <footer>
