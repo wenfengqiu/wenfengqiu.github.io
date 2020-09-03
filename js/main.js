@@ -9,73 +9,59 @@ app.controller('mainCtrl', function($scope) {
 	$scope.headerPapers = [...'PAPERS'].map(convertLetter);
 
     /** ----------------------------- Home ----------------------------- */
-    // Self introduction content displayed before the url content.
-	$scope.selfIntroductionBeforeUrl = `Lorem ipsum dolor sit amet, consetetur 
-	    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-		dolore magna  aliquyam erat, sed diam voluptua. At vero eos et accusam
-		dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus 
-		est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-		sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
-		dolore magna aliquyam erat, sed diam voluptua.`;
-    // The url content. The url content won't be displayed if it is an empty 
-    // string $scope.selfIntroductionForUrl = ''.
-    $scope.selfIntroductionForUrl = 'URL content type whatever or leave if empty';
-    // Self introduction content displayed after the url content.
-    $scope.selfIntroductionAfterUrl = `Lorem ipsum dolor sit amet, consetetur 
-        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
-        dolore magna aliquyam erat, sed diam voluptua.`;
-    // The link for the url.
-    $scope.selfIntroductionUrl = 'docs/pdf/cv.pdf';
+	$scope.selfIntroduction1 = `I am a 6th year PhD candidate in the Department
+	of Agricultural and Resource Economics at UC Berkeley. I am on the 2020-21 
+	job market.`;
+	$scope.selfIntroduction2 = `My research interests are in microeconomic theory, 
+	with focus on decision theory and information economics.`;
+	$scope.selfIntroduction3 = ``;
 
     $scope.cv = 'docs/pdf/cv.pdf';
-    $scope.email = 'wqiu03@berkeley.edu';
+    $scope.email = 'wqiu03[at]berkeley.edu';
 
 
 
     /** ----------------------------- Research ----------------------------- */
     // (with ...) will be hidden if coauthors is an empty array coauthors: []
 	$scope.papers = [{
-		title: 'Paper title 1',
+		title: 'Uncertainty in the Small and Large',
 		url: 'docs/pdf/paper1.pdf',
-		coauthors: [{
-			name: 'ABC EDF',
-			url: 'https://www.google.com',
-		}],
-		description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-		sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-		aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo 
-		dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus 
-		est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-		sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
-		dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et 
-		justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-		takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit 
-		amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-		invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.`
+		coauthor: {
+			name: 'David Ahn',
+			url: 'https://eml.berkeley.edu/~dahn/',
+		},
+		abstract: `hellow hou adfada`,
+		note: `Job Market Paper`,
 	}, {
-		title: 'Paper title 2',
+		title: 'Stochastic Choice with Gradual Attention',
 		url: 'docs/pdf/paper2.pdf',
-		coauthors: [],
-		description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-		sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-		aliquyam erat, sed diam voluptua.`
+		coauthor: null,
+		abstract: `Evaluates the expression and inserts the resulting HTML into the element in a secure way. By default, the resulting HTML content will be sanitized using the $sanitize service. To utilize this functionality, ensure that $sanitize is available, for example, by including ngSanitize in your module's dependencies (not in core AngularJS). In order to use ngSanitize in your module's dependencies, you need to include "angular-sanitize.js" in your application.
+
+You may also bypass sanitization for values you know are safe. To do so, bind to an explicitly trusted value via $sce.trustAsHtml. See the example under Strict Contextual Escaping (SCE).
+
+Note: If a $sanitize service is unavailable and the bound value isn't explicitly trusted, you will have an exception (instead of an exploit.)`,
+		note: ``,
 	}, {
-		title: 'Paper title 3',
-		url: 'docs/pdf/paper3.pdf',
-		coauthors: [{
-			name: 'ABC EDF',
-			url: 'https://www.google.com',
-		}, {
-			name: 'XXX YYY',
-			url: 'https://www.google.com',
-		}, {
-			name: 'John Harris',
-			url: 'https://www.google.com',
-		}],
-		description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-		sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-		aliquyam erat, sed diam voluptua.`
+		title: 'Regulating Poorly-Measured Pollution: Feasible Policies to Address Methane Emissions',
+		url: '',
+		coauthor: {
+			name: 'Karl Dunkle Werner',
+			url: 'https://karldw.org',
+		},
+		abstract: ``,
+		note: ``,
+	}, {
+		title: 'Information Design with Background Risk',
+		url: '',
+		coauthor: null,
+		abstract: ``,
+		note: ``,
 	}];
+
+	$scope.isShowContent = (content) => {
+		return !!content;
+	};
 
 	$scope.isShowComma = (coauthors, idx) => {
 		return coauthors.length > 1 && idx !== coauthors.length - 1;
@@ -83,16 +69,16 @@ app.controller('mainCtrl', function($scope) {
 
     /** ----------------------------- Teaching ----------------------------- */
     $scope.teachings = [{
-    	title: 'Teaching 1',
-    	url: 'https://www.google.com',
-    	description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-		sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-		aliquyam erat, sed diam voluptua.`,
+    	title: 'Econ 201A - Graduate General Equilibrium Theory',
+    	url: '',
+    	description: `Fall 2019, 2018, 2017`,
     }, {
-    	title: 'Teaching 2',
-    	url: 'https://www.google.com',
-    	description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-		sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-		aliquyam erat, sed diam voluptua.`,
+    	title: 'Econ 136 - Undergraduate Financial Economics',
+    	url: '',
+    	description: `Spring 2018`,
+    }, {
+    	title: 'Econ 138 - Undergraduate Financial and Behavioral Economics',
+    	url: '',
+    	description: `Spring 2019`,
     }]
 });

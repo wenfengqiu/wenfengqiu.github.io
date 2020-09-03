@@ -40,15 +40,12 @@
                 <img src="img/photo.jpeg" alt="Wenfeng Qiu" width="300">
             </div>
             <div class="home-self-introduction">
-                <div>
-                    <span>{{selfIntroductionBeforeUrl}}</span>
-                    <span>
-                        <a ng-href="{{selfIntroductionUrl}}" target="_blank">
-                            {{selfIntroductionForUrl}}
-                        </a>
-                    <span>
-                    <span>{{selfIntroductionBeforeUrl}}</span>
-                </div>
+                <div class="fullname">Wenfeng Qiu</div>
+                <div>{{selfIntroduction1}}</div>
+                <br>
+                <div>{{selfIntroduction2}}</div>
+                <br>
+                <div>{{selfIntroduction3}}</div>
                 <br>
                 <div><a ng-href="{{cv}}" target="_blank">CV</a></div>
                 <br>
@@ -68,15 +65,15 @@
                             <a ng-href="{{paper.url}}" target="_blank" class="list-title">
                                 {{paper.title}}
                             </a>
-                            <span ng-if="paper.coauthors.length">
-                                &nbsp;&nbsp;(with 
-                                <span ng-repeat="coauthor in paper.coauthors track by $index" class="paper-coauthor">
-                                    <a ng-href="{{coauthor.url}}" target="_blank">{{coauthor.name}}</a>
-                                    <span ng-if="isShowComma(paper.coauthors, $index)">, </span>
-                                </span>)
-                            </span>
+                            <span ng-if="isShowContent(paper.note)">[{{paper.note}}]</span>
+                            <div ng-if="isShowContent(paper.coauthor)">
+                                (with <a ng-href="{{paper.coauthor.url}}" target="_blank">{{paper.coauthor.name}}</a>)
+                            </div>
                         </div>
-                        <p class="description">{{paper.description}}</p>
+                        <div class="abstract">
+                            <b ng-if="isShowContent(paper.abstract)" class="paper-abstract">Abstract:</b> 
+                            {{paper.abstract}}
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -89,8 +86,7 @@
                             {{teaching.title}}
                         </a>
                     </div>
-                    <div>{{teaching.description}}</div>
-                    <p class="description">{{paper.description}}</p>
+                    <p class="abstract">{{teaching.description}}</p>
                 </li>
             </ul>
         </div>

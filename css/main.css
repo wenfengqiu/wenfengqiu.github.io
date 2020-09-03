@@ -46,7 +46,7 @@ i {
 /* Main Content */
 
 .main-content {
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 /* Home */
@@ -56,14 +56,22 @@ i {
 }
 
 .home-content .home-self-introduction {
-    padding: 100px;
+    padding: 0 20px 100px 100px;
+    text-align: justify;
+}
+
+.home-content .home-self-introduction .fullname {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 16px;
 }
 
 /* Research & Teaching */
 
 .subtitle-papers {
-    font-size: 14px;
-    padding: 30px 10px 30px 30px;
+    color: #999999;
+    font-size: 16px;
+    padding: 0 10px 30px 30px;
 }
 
 .list-container {
@@ -72,7 +80,7 @@ i {
 }
 
 .list-container a.list-title {
-    color: #999999;
+    color: black;
     vertical-align: bottom;
     line-height: 22px;
     font-weight: bold;
@@ -80,15 +88,20 @@ i {
 
 .list-container a.list-title:hover {
     color: white;
-    background-color: #999999;
+    background-color: black;
 }
 
-.list-container.description {
-    font-size: 14px;
+.list-container .abstract {
+    font-size: 16px;
+    text-align: justify;
 }
 
 .paper-coauthor {
     padding-left: 5px;
+}
+
+.paper-abstract {
+    color: #999999;
 }
 
 /* Pixel Font */
