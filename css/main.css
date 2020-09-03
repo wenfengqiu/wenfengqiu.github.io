@@ -1,79 +1,94 @@
 body {
-    margin: 60px auto;
+    margin: 60px auto !important;
     width: 80%;
-}
-
-footer {
-    margin-top: 20px;
-    border-top: 1px solid #d5d5d5;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-
-nav ul,
-footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-nav ul li,
-footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-a {
-    text-decoration: none;
-    color: #999999;
-    padding: 10px;
-    vertical-align: middle;
-    font-smooth: never;
-    -webkit-font-smoothing : none;
-}
-
-a:hover {
-    color: white;
-    background-color: #999999;
 }
 
 i {
     vertical-align: middle;
 }
 
-.subtitle-working-papers {
-    padding: 30px 10px 30px 10px;
+/* Navigation Bar */
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #999999;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    background-color: white;
+    color: #999999;
 }
 
-.subtitle-work-in-progress {
-    padding: 100px 10px 30px 10px;
+.header-nav a {
+    text-decoration: none;
+    padding: 10px;
+    vertical-align: middle;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
 }
 
-.paper-details {
+.header-nav a:hover {
+    color: white !important;
+    background-color: #999999 !important;
+}
+
+.header-nav .header-home {
+    font-size: 32px;
+}
+
+.header-nav .header-research-teaching {
+    position: relative;
+    bottom: -20px;
+}
+
+/* Main Content */
+
+.main-content {
+    margin-top: 100px;
+}
+
+/* Home */
+
+.home-content {
+    display: flex;
+}
+
+.home-content .home-self-introduction {
+    padding: 100px;
+}
+
+/* Research & Teaching */
+
+.subtitle-papers {
+    font-size: 14px;
+    padding: 30px 10px 30px 30px;
+}
+
+.list-container {
     vertical-align: bottom;
     line-height: 22px;
 }
 
-a.paper-url {
+.list-container a.list-title {
     color: #999999;
     vertical-align: bottom;
     line-height: 22px;
     font-weight: bold;
 }
 
-a.paper-url:hover {
+.list-container a.list-title:hover {
     color: white;
     background-color: #999999;
+}
+
+.list-container.description {
+    font-size: 14px;
+}
+
+.paper-coauthor {
+    padding-left: 5px;
 }
 
 /* Pixel Font */
