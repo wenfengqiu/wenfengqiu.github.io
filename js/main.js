@@ -30,7 +30,7 @@ app.controller('mainCtrl', function($scope) {
 			name: 'David Ahn',
 			url: 'https://eml.berkeley.edu/~dahn/',
 		},
-		abstract: `hellow hou adfada`,
+		abstract: ``,
 		note: ``,
 	}, {
 		title: 'Stochastic Choice with Gradual Attention',
