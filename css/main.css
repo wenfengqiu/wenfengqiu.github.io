@@ -36,10 +36,11 @@ i {
 }
 
 .header-nav .header-home {
-    font-size: 32px;
+    font-size: 3vw;
 }
 
 .header-nav .header-research-teaching {
+    font-size: 1.5vw;
     position: relative;
     bottom: -20px;
 }
@@ -48,6 +49,7 @@ i {
 
 .main-content {
     margin-top: 150px;
+    font-size: 20px;
 }
 
 /* Home */
@@ -71,7 +73,6 @@ i {
 
 .subtitle-papers {
     color: #999999;
-    font-size: 16px;
     padding: 0 10px 30px 30px;
 }
 
@@ -93,7 +94,6 @@ i {
 }
 
 .list-container .abstract {
-    font-size: 16px;
     text-align: justify;
 }
 
