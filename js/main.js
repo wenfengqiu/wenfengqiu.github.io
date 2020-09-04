@@ -25,29 +25,18 @@ app.controller('mainCtrl', function($scope) {
     // (with ...) will be hidden if coauthors is an empty array coauthors: []
 	$scope.papers = [{
 		title: 'Uncertainty in the Small and Large',
-		url: 'docs/pdf/paper1.pdf',
+		url: '',
 		coauthor: {
 			name: 'David Ahn',
 			url: 'https://eml.berkeley.edu/~dahn/',
 		},
 		abstract: `hellow hou adfada`,
-		note: `Job Market Paper`,
+		note: ``,
 	}, {
 		title: 'Stochastic Choice with Gradual Attention',
 		url: 'docs/pdf/paper2.pdf',
 		coauthor: null,
-		abstract: `Evaluates the expression and inserts the resulting HTML into 
-		the element in a secure way. By default, the resulting HTML content will 
-		be sanitized using the $sanitize service. To utilize this functionality, 
-		ensure that $sanitize is available, for example, by including ngSanitize 
-		in your module's dependencies (not in core AngularJS). In order to use 
-		ngSanitize in your module's dependencies, you need to include 
-		"angular-sanitize.js" in your application.
-		You may also bypass sanitization for values you know are safe. To do so, 
-		bind to an explicitly trusted value via $sce.trustAsHtml. See the 
-		example under Strict Contextual Escaping (SCE).
-		Note: If a $sanitize service is unavailable and the bound value isn't
-		explicitly trusted, you will have an exception (instead of an exploit.)`,
+		abstract: ``,
 		note: ``,
 	}, {
 		title: 'Regulating Poorly-Measured Pollution: Feasible Policies to Address Methane Emissions',
