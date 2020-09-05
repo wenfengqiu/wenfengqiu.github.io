@@ -36,11 +36,11 @@ i {
 }
 
 .header-nav .header-home {
-    font-size: 3vw;
+    font-size: 32px;
 }
 
 .header-nav .header-research-teaching {
-    font-size: 1.5vw;
+    font-size: 16px;
     position: relative;
     bottom: -20px;
 }
@@ -48,7 +48,7 @@ i {
 /* Main Content */
 
 .main-content {
-    margin-top: 150px;
+    margin-top: 170px;
     font-size: 20px;
 }
 
@@ -103,6 +103,40 @@ i {
 
 .paper-abstract {
     color: #999999;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .header-nav .header-home {
+        font-size: 32px;
+    }
+
+    .header-nav .header-research-teaching {
+        font-size: 16px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .header-nav .header-home {
+        font-size: 24px;
+    }
+
+    .header-nav .header-research-teaching {
+        font-size: 12px;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .header-nav .header-home {
+        font-size: 16px;
+    }
+
+    .header-nav .header-research-teaching {
+        font-size: 8px;
+        bottom: -10px;
+    }
 }
 
 /* Pixel Font */
