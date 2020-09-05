@@ -35,12 +35,7 @@ i {
     background-color: #999999 !important;
 }
 
-.header-nav .header-home {
-    font-size: 32px;
-}
-
 .header-nav .header-research-teaching {
-    font-size: 16px;
     position: relative;
     bottom: -20px;
 }
@@ -56,10 +51,10 @@ i {
 
 .home-content {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .home-content .home-self-introduction {
-    padding: 0 20px 100px 100px;
     text-align: justify;
 }
 
@@ -114,6 +109,11 @@ i {
     .header-nav .header-research-teaching {
         font-size: 16px;
     }
+
+    .home-content .home-self-introduction {
+        padding: 0 20px 100px 100px;
+        width: calc(100% - 300px);
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -124,6 +124,11 @@ i {
 
     .header-nav .header-research-teaching {
         font-size: 12px;
+    }
+
+    .home-content .home-self-introduction {
+        padding: 50px 20px 100px;
+        width: 100%;
     }
 }
 
@@ -136,6 +141,11 @@ i {
     .header-nav .header-research-teaching {
         font-size: 8px;
         bottom: -10px;
+    }
+
+    .home-content .home-self-introduction {
+        padding: 50px 20px 100px;
+        width: 100%;
     }
 }
 
