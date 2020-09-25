@@ -16,7 +16,7 @@ app.controller('mainCtrl', function($scope) {
 	with focus on decision theory and information economics.`;
 	$scope.selfIntroduction3 = ``;
 
-    $scope.cv = 'docs/pdf/cv.pdf';
+    $scope.cv = 'docs/pdf/Wenfeng_Qiu_CV.pdf';
     $scope.email = 'wqiu03[at]berkeley.edu';
 
 
@@ -33,13 +33,13 @@ app.controller('mainCtrl', function($scope) {
 		abstract: ``,
 		note: ``,
 	}, {
-		title: 'Stochastic Choice with Gradual Attention',
+		title: 'Stochastic Choice from Gradual Attention',
 		url: 'docs/pdf/paper2.pdf',
 		coauthor: null,
 		abstract: ``,
 		note: ``,
 	}, {
-		title: 'Regulating Poorly-Measured Pollution: Feasible Policies to Address Methane Emissions',
+		title: 'Hard to Measure Well: Can Feasible Policies Reduce Methane Emissions?',
 		url: '',
 		coauthor: {
 			name: 'Karl Dunkle Werner',
