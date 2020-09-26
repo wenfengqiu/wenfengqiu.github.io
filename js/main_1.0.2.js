@@ -16,7 +16,7 @@ app.controller('mainCtrl', function($scope) {
 	with focus on decision theory and information economics.`;
 	$scope.selfIntroduction3 = ``;
 
-    $scope.cv = 'docs/pdf/Wenfeng_Qiu_CV.pdf';
+    $scope.cv = 'docs/pdf/Wenfeng_Qiu_CV_1.pdf';
     $scope.email = 'wqiu03[at]berkeley.edu';
 
 
