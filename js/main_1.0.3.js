@@ -31,7 +31,7 @@ app.controller('mainCtrl', function($scope) {
 			url: 'https://eml.berkeley.edu/~dahn/',
 		},
 		abstract: ``,
-		note: ``,
+		note: 'Job Market Paper',
 	}, {
 		title: 'Stochastic Choice from Gradual Attention',
 		url: 'docs/pdf/paper2.pdf',
