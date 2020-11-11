@@ -34,7 +34,7 @@ app.controller('mainCtrl', function($scope) {
 		note: 'Job Market Paper',
 	}, {
 		title: 'Stochastic Choice from Gradual Attention',
-		url: 'docs/pdf/paper2.pdf',
+		url: '',
 		coauthor: null,
 		abstract: ``,
 		note: ``,
