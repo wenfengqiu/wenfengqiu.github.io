@@ -16,7 +16,7 @@ app.controller('mainCtrl', function($scope) {
 	with focus on decision theory and information economics.`;
 	$scope.selfIntroduction3 = ``;
 
-    $scope.cv = 'docs/pdf/Wenfeng_Qiu_CV_1.pdf';
+    $scope.cv = 'docs/pdf/Wenfeng_Qiu_CV2.pdf';
     $scope.email = 'wqiu03[at]berkeley.edu';
 
 
@@ -25,12 +25,30 @@ app.controller('mainCtrl', function($scope) {
     // (with ...) will be hidden if coauthors is an empty array coauthors: []
 	$scope.papers = [{
 		title: 'Uncertainty in the Small and Large',
-		url: '',
+		url: 'docs/pdf/JMP.pdf',
 		coauthor: {
 			name: 'David Ahn',
 			url: 'https://eml.berkeley.edu/~dahn/',
 		},
-		abstract: ``,
+		abstract: `Most decisions are observed in isolation without direct \
+		measurement of correlation in beliefs across state spaces or \
+		complementarity in tastes across prize spaces. We introduce a novel \
+		model with two decision problems with distinct states and prizes, \
+		which we call small worlds, without observation of bets that are \
+		contingent on the realization of both worlds. We provide a \
+		characterization of subjective expected utility, where choices are \
+		made as if there is a joint distribution over the product of the state \
+		spaces and a joint utility index over pairs of prizes from both prize \
+		spaces. Turning to the identification problem, we show that the joint \
+		utility index over pairs of prizes and the marginal belief over each \
+		small world is identified, but the uniqueness of the joint \
+		distribution is more subtle. If the utility index is separable across \
+		prize spaces, then the correlation across state spaces is unidentified; \
+		but if there is any complementarity across prizes, then the joint \
+		distribution is exactly identified. We apply our analysis to provide \
+		behavioral foundations for independence of the distribution across \
+		state spaces. Finally, we generalize the model to allow for ambiguity \
+		about correlations.`,
 		note: 'Job Market Paper',
 	}, {
 		title: 'Stochastic Choice from Gradual Attention',
