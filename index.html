@@ -9,7 +9,7 @@
     <title>Wenfeng Qiu</title>
 
     <link rel="icon" href="img/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="css/main_1.0.2.css">
+    <link rel="stylesheet" type="text/css" href="css/main_1.0.3.css">
     <link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 
@@ -63,8 +63,8 @@
                     <i ng-class="[letter]"></i>
                 </span>
             </div>
-            <div>
-                <ul style="list-style:square" ng-repeat="paper in papers track by $index">
+            <div class="research-list">
+                <ul ng-repeat="paper in papers track by $index">
                     <li class="list-container">
                         <div>
                             <a ng-href="{{paper.url}}" target="_blank" class="list-title">

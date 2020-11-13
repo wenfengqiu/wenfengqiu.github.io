@@ -75,6 +75,11 @@ i {
     padding: 0 10px 30px 30px;
 }
 
+.research-list ul {
+    list-style:square;
+    padding-inline-end: 40px;
+}
+
 .list-container {
     vertical-align: bottom;
     line-height: 22px;
@@ -94,6 +99,7 @@ i {
 
 .list-container .abstract {
     text-align: justify;
+    margin-top: 16px;
 }
 
 .paper-coauthor {
