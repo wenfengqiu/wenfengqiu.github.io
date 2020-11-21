@@ -9,11 +9,12 @@ app.controller('mainCtrl', function($scope) {
 	$scope.headerPapers = [...'PAPERS'].map(convertLetter);
 
     /** ----------------------------- Home ----------------------------- */
-	$scope.selfIntroduction1 = `I am a 6th year PhD candidate in the Department
-	of Agricultural and Resource Economics at UC Berkeley. I am on the 2020-21 
-	job market.`;
-	$scope.selfIntroduction2 = `My research interests are in microeconomic theory, 
-	with focus on decision theory and information economics.`;
+	$scope.selfIntroduction1 = `I am a PhD candidate in the Department
+	of Agricultural and Resource Economics at UC Berkeley. I am on the job 
+	market this year and am available for interviews during the 2020-21 job 
+	market period.`;
+	$scope.selfIntroduction2 = `My research interests are in microeconomic 
+	theory, with focus on decision theory and information economics.`;
 	$scope.selfIntroduction3 = ``;
 
     $scope.cv = 'docs/pdf/Wenfeng_Qiu_CV2.pdf';
@@ -24,7 +25,7 @@ app.controller('mainCtrl', function($scope) {
     /** ----------------------------- Research ----------------------------- */
     // (with ...) will be hidden if coauthors is an empty array coauthors: []
 	$scope.papers = [{
-		title: 'Uncertainty in the Small and Large',
+		title: 'Uncertainty in the Small and in the Large',
 		url: 'docs/pdf/JMP.pdf',
 		coauthor: {
 			name: 'David Ahn',
@@ -57,7 +58,7 @@ app.controller('mainCtrl', function($scope) {
 		note: ``,
 	}, {
 		title: 'Hard to Measure Well: Can Feasible Policies Reduce Methane Emissions?',
-		url: '',
+		url: 'docs/pdf/Karl_Dunkle_Werner_JMP.pdf',
 		coauthor: {
 			name: 'Karl Dunkle Werner',
 			url: 'https://karldw.org',
