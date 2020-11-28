@@ -133,16 +133,16 @@ i {
 
 .fa-chevron-up {
     transition: transform 0.5s;
+    z-index: -1;
 }
 
 .fa-chevron-up:not(.collapsed) {
     top: -2px;
-    position: relative; 
+    position: relative;
 }
 
 .fa-chevron-up.collapsed {
     transform: rotate(-180deg);
-    
 }
 
 @media only screen and (min-width: 769px) {

@@ -81,7 +81,8 @@ app.controller('mainCtrl', function($scope) {
 			alt: 'Empirical CDF',
 			description: `Experimental evidence of better choices with more 
 			time: choices in blue first-order stochastically dominates choices 
-			in red. (<b>Data Source</b>: Caplin, Dean, and Martin (2011))`,
+			in red. (<span class="italic-font">Data Source</span>: 
+			Caplin, Dean, and Martin (2011))`,
 		},
 	}, {
 		title: 'Hard to Measure Well: Can Feasible Policies Reduce Methane Emissions?',
