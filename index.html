@@ -9,12 +9,14 @@
     <title>Wenfeng Qiu</title>
 
     <link rel="icon" href="img/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="css/main_1.0.3.css">
+    <link rel="stylesheet" type="text/css" href="css/main_1.0.4.css">
     <link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/angular.min.js"></script>
-    <script src="js/main_1.0.6.js"></script>
+    <script src="js/main_1.0.7.js"></script>
 </head>
 <body>
 <div class="container" ng-app="personalWeb" ng-controller="mainCtrl">
@@ -67,7 +69,7 @@
                 <ul ng-repeat="paper in papers track by $index">
                     <li class="list-container">
                         <div>
-                            <a ng-href="{{paper.url}}" target="_blank" class="list-title">
+                            <a ng-href="{{paper.url}}" target="_blank" class="list-title" ng-class="{clickable: paper.url}">
                                 {{paper.title}}
                             </a>
                             <span ng-if="isShowContent(paper.note)">[{{paper.note}}]</span>
@@ -75,9 +77,18 @@
                                 (with <a ng-href="{{paper.coauthor.url}}" target="_blank">{{paper.coauthor.name}}</a>)
                             </div>
                         </div>
-                        <div class="abstract">
-                            <b ng-if="isShowContent(paper.abstract)" class="paper-abstract">Abstract:</b> 
-                            {{paper.abstract}}
+                        <div class="abstract" data-toggle="collapse" ng-if="isShowContent(paper.abstract)">
+                            <div type="button" class="abstract-title" ng-click="clickAbstract(paper)"> 
+                                Abstract: 
+                                <i class="fa fa-chevron-up" ng-class="{collapsed: paper.abstractCollapsed}"></i>
+                            </div>
+                            <div class="abstract-content collapse" ng-class="{show: !paper.abstractCollapsed}">
+                              <p ng-bind-html="paper.abstract | to_trusted"></p>
+                              <div ng-if="paper.image" class="abstract-image-container">
+                                  <img class="abstract-image" src="{{paper.image.src}}" alt="{{paper.image.alt}}">
+                                  <p class="abstract-image-description" ng-bind-html="paper.image.description | to_trusted"></p>
+                              </div>
+                            </div>
                         </div>
                     </li>
                 </ul>

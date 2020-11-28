@@ -90,15 +90,15 @@ i {
     vertical-align: bottom;
     line-height: 22px;
     font-weight: bold;
+    text-decoration: none;
 }
 
-.list-container a.list-title:hover {
+.list-container a.list-title.clickable:hover {
     color: white;
     background-color: black;
 }
 
 .list-container .abstract {
-    text-align: justify;
     margin-top: 16px;
 }
 
@@ -106,8 +106,43 @@ i {
     padding-left: 5px;
 }
 
-.paper-abstract {
+.abstract-title {
     color: #999999;
+    padding-bottom: 10px;
+}
+
+.abstract-content {
+    text-align: justify;
+}
+
+.abstract-content .italic-font {
+    font-style: italic;
+}
+
+.abstract-image-container {
+    margin: 20px 0;
+}
+
+.abstract-image,
+.abstract-image-description {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fa-chevron-up {
+    transition: transform 0.5s;
+}
+
+.fa-chevron-up:not(.collapsed) {
+    top: -2px;
+    position: relative; 
+}
+
+.fa-chevron-up.collapsed {
+    transform: rotate(-180deg);
+    
 }
 
 @media only screen and (min-width: 769px) {
@@ -195,6 +230,11 @@ i {
         padding: 50px 20px 100px;
         width: 100%;
     }
+
+    .abstract-image,
+    .abstract-image-description {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 321px) and (max-width: 480px) {
@@ -224,6 +264,11 @@ i {
         padding: 50px 20px 100px;
         width: 100%;
     }
+
+    .abstract-image,
+    .abstract-image-description {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -251,6 +296,11 @@ i {
 
     .home-content .home-self-introduction {
         padding: 50px 20px 100px;
+        width: 100%;
+    }
+
+    .abstract-image,
+    .abstract-image-description {
         width: 100%;
     }
 }

@@ -49,13 +49,40 @@ app.controller('mainCtrl', function($scope) {
 		identified. We apply our analysis to provide behavioral foundations for 
 		independence of the distribution across state spaces. Finally, we 
 		generalize the model to allow for ambiguity about correlations.`,
+		abstractCollapsed: false,
 		note: 'Job Market Paper',
+		image: null,
 	}, {
 		title: 'Stochastic Choice from Gradual Attention',
 		url: '',
 		coauthor: null,
-		abstract: ``,
+		abstract: `We propose a novel model of stochastic choices with limited 
+		attention. A consumer evaluates a menu of options sequentially, 
+		following an order that depends on the salience of the options 
+		(called <span class="italic-font">salience order</span>). 
+		Due to the time constraint, the consumer might not be able to evaluate 
+		every option in the menu. The set of options she has evaluated forms her 
+		consideration set and she chooses her most preferred option from the 
+		consideration set. Her evaluation process is modeled by a counting 
+		process. As a consequence, her consideration set and choice can be 
+		stochastic. We provide an axiomatic characterization of this model. 
+		With the rich data containing both the choices and the associated 
+		contemplation time, we show the primitives of the models such as the 
+		salience order and the preference can be uniquely recovered. A key 
+		feature of our model is that the consumer makes better choices (in terms 
+		of first-order stochastic dominance) as her contemplation time 
+		increases. We test this choice pattern using the experimental data by 
+		Caplin, Dean, and Martin (2011), and find suggestive evidence in support 
+		of this choice pattern.`,
+		abstractCollapsed: false,
 		note: ``,
+		image: {
+			src: 'img/Empirical_CDF.png', 
+			alt: 'Empirical CDF',
+			description: `Experimental evidence of better choices with more 
+			time: choices in blue first-order stochastically dominates choices 
+			in red. (<b>Data Source</b>: Caplin, Dean, and Martin (2011))`,
+		},
 	}, {
 		title: 'Hard to Measure Well: Can Feasible Policies Reduce Methane Emissions?',
 		url: 'docs/pdf/Karl_Dunkle_Werner_JMP.pdf',
@@ -63,14 +90,37 @@ app.controller('mainCtrl', function($scope) {
 			name: 'Karl Dunkle Werner',
 			url: 'https://karldw.org',
 		},
-		abstract: ``,
+		abstract: `Oil and gas wells emit large quantities of methane, a 
+		greenhouse gas 34 times more potent than carbon dioxide. Methane 
+		emissions are rarely priced and lightly regulated—in part because they 
+		are hard to measure—leading to a large climate externality. However, 
+		measurement technology is improving, with remote sensing and other 
+		techniques opening the door for policy innovation. We present a 
+		theoretical model of emissions abatement at the well level and a range 
+		of feasible policy options, then use data constructed from 
+		cross-sectional scientific studies to estimate abatement costs. We 
+		simulate audit policies under realistic constraints, varying the 
+		information the regulator uses in choosing wells to audit. These 
+		policies become more effective when they can target on well covariates, 
+		detect leaks remotely, and charge higher fees for leaks. We estimate a 
+		policy that audits 1% of wells with uniform probability achieves less 
+		than 1% of the gains of the infeasible first best. Using the same number 
+		of audits targeted on remotely sensed emissions data achieves gains of 
+		30–60% of the first best. These results demonstrate that because leaks 
+		are rare events, targeting is essential for achieving welfare gains and 
+		emissions reductions. Auditing a small fraction of wells can have a 
+		large impact when properly targeted.`,
+		abstractCollapsed: false,
 		note: ``,
+		image: null,
 	}, {
 		title: 'Information Design with Background Risk',
 		url: '',
 		coauthor: null,
 		abstract: ``,
-		note: ``,
+		abstractCollapsed: true,
+		note: 'draft upon request',
+		image: null,
 	}];
 
 	$scope.isShowContent = (content) => {
@@ -80,6 +130,11 @@ app.controller('mainCtrl', function($scope) {
 	$scope.isShowComma = (coauthors, idx) => {
 		return coauthors.length > 1 && idx !== coauthors.length - 1;
 	}
+
+	$scope.clickAbstract = (paper) => {
+		paper.abstractCollapsed = !paper.abstractCollapsed;
+	}
+
 
     /** ----------------------------- Teaching ----------------------------- */
     $scope.teachings = [{
@@ -96,3 +151,9 @@ app.controller('mainCtrl', function($scope) {
     	description: `Spring 2019`,
     }]
 });
+
+app.filter('to_trusted', ['$sce', function($sce){
+	return function(text) {
+		return $sce.trustAsHtml(text);
+	};
+}]);
