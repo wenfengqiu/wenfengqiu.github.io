@@ -54,7 +54,7 @@ app.controller('mainCtrl', function($scope) {
 		image: null,
 	}, {
 		title: 'Stochastic Choice from Gradual Attention',
-		url: '',
+		url: 'docs/pdf/Stochastic_Choice_Gradual_Attention_Nov29.pdf',
 		coauthor: null,
 		abstract: `We propose a novel model of stochastic choices with limited 
 		attention. A consumer evaluates a menu of options sequentially, 
