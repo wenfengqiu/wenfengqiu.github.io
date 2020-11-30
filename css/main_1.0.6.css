@@ -125,7 +125,8 @@ i {
 
 .abstract-image,
 .abstract-image-description {
-    width: 70%;
+    width: 100%;
+    max-width: 576px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -230,11 +231,6 @@ i {
         padding: 50px 20px 100px;
         width: 100%;
     }
-
-    .abstract-image,
-    .abstract-image-description {
-        width: 100%;
-    }
 }
 
 @media only screen and (min-width: 321px) and (max-width: 480px) {
@@ -264,11 +260,6 @@ i {
         padding: 50px 20px 100px;
         width: 100%;
     }
-
-    .abstract-image,
-    .abstract-image-description {
-        width: 100%;
-    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -296,11 +287,6 @@ i {
 
     .home-content .home-self-introduction {
         padding: 50px 20px 100px;
-        width: 100%;
-    }
-
-    .abstract-image,
-    .abstract-image-description {
         width: 100%;
     }
 }
