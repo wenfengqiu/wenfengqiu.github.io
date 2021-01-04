@@ -111,6 +111,10 @@ i {
     padding-bottom: 10px;
 }
 
+.abstract-title:hover {
+    cursor: pointer;
+}
+
 .abstract-content {
     text-align: justify;
 }
