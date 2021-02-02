@@ -10,9 +10,7 @@ app.controller('mainCtrl', function($scope) {
 
     /** ----------------------------- Home ----------------------------- */
 	$scope.selfIntroduction1 = `I am a PhD candidate in the Department
-	of Agricultural and Resource Economics at UC Berkeley. I am on the job 
-	market this year and am available for interviews during the 2020-21 job 
-	market period.`;
+	of Agricultural and Resource Economics at UC Berkeley.`;
 	$scope.selfIntroduction2 = `My research interests are in microeconomic 
 	theory, with focus on decision theory and information economics.`;
 	$scope.selfIntroduction3 = ``;
