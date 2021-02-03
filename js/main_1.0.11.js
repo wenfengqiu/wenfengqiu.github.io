@@ -48,7 +48,7 @@ app.controller('mainCtrl', function($scope) {
 		independence of the distribution across state spaces. Finally, we 
 		generalize the model to allow for ambiguity about correlations.`,
 		abstractCollapsed: false,
-		note: 'Job Market Paper',
+		note: '',
 		image: null,
 	}, {
 		title: 'Stochastic Choice from Gradual Attention',
