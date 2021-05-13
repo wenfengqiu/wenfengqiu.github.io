@@ -2,6 +2,10 @@ i {
     vertical-align: middle;
 }
 
+.italic-text {
+    font-style: italic;
+}
+
 /* Navigation Bar */
 
 .header-nav {
