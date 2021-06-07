@@ -9,15 +9,6 @@ app.controller('mainCtrl', function($scope) {
 	$scope.headerPapers = [...'PAPERS'].map(convertLetter);
 
     /** ----------------------------- Home ----------------------------- */
-	$scope.selfIntroduction1 = `I am a PhD candidate in the Department
-	of Agricultural and Resource Economics at UC Berkeley.`;
-	$scope.selfIntroduction2 = `My research interests are in microeconomic 
-	theory, with focus on decision theory and information economics.`;
-	$scope.selfIntroduction3 = ``;
-
-    $scope.cv = 'docs/pdf/Wenfeng_Qiu_CV2.pdf';
-    $scope.email = 'wqiu03[at]berkeley.edu';
-
 
 
     /** ----------------------------- Research ----------------------------- */
