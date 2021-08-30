@@ -39,7 +39,7 @@ app.controller('mainCtrl', function($scope) {
 		independence of the distribution across state spaces. Finally, we 
 		generalize the model to allow for ambiguity about correlations.`,
 		abstractCollapsed: false,
-		note: 'Revise and resubmit at',
+		note: 'Revise and resubmit at ',
 		journal: 'Journal of Economic Theory',
 		image: null,
 	}, {
@@ -103,6 +103,31 @@ app.controller('mainCtrl', function($scope) {
 		large impact when properly targeted.`,
 		abstractCollapsed: false,
 		note: ``,
+		image: null,
+	}, {
+		title: 'Cherry Picking',
+		url: 'https://osf.io/preprints/metaarxiv/as9zd/',
+		coauthor: {
+			name: 'Megan Lang',
+			url: 'https://www.meganlangecon.com',
+		},
+		abstract: `Measures like pre-analysis plans ask researchers to describe 
+		planned data collection and justify data exclusions, but they provide 
+		little enforceable oversight of primary data collection. We show that a 
+		simple algorithm can select large subsets of data that yield 
+		economically meaningful and statistically significant treatment effects. 
+		The subsets cannot be distinguished from a random sample of the original 
+		data, rendering the selection undetectable if peer reviewers are unaware 
+		of the size of the original dataset. Our results hold using simulated 
+		data and replication data from a well-known study. We show that there 
+		are few natural deterrents to dataset manipulation: the results in our 
+		selected subset are robust to a range of alternative specifications, our 
+		algorithm performs well under complex sampling strategies, and our 
+		subset can yield artificially high effects on multiple outcomes. We 
+		conclude by proposing a measure to prevent such manipulation in field 
+		experiments.`,
+		abstractCollapsed: false,
+		note: '',
 		image: null,
 	}, {
 		title: 'Information Design with Background Risk',
