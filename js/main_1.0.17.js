@@ -14,32 +14,29 @@ app.controller('mainCtrl', function($scope) {
     /** ----------------------------- Research ----------------------------- */
     // (with ...) will be hidden if coauthors is an empty array coauthors: []
 	$scope.papers = [{
-		title: 'Uncertainty in the Small and in the Large',
-		url: 'docs/pdf/JMP.pdf',
+		title: 'Uncertainty from the Small to the Large',
+		url: 'docs/pdf/Uncertainty_Oct_2021.pdf',
 		coauthor: {
 			name: 'David Ahn',
-			url: 'https://eml.berkeley.edu/~dahn/',
+			url: 'https://sites.wustl.edu/ahnd/',
 		},
-		abstract: `Most decisions are observed in isolation without direct 
-		measurement of correlation in beliefs across state spaces or 
+		abstract: `Related decisions are often observed in isolation without 
+		direct measurement of correlation in beliefs across state spaces or 
 		complementarity in tastes across prize spaces. We introduce a novel 
 		model with two decision problems with distinct states and prizes, which 
 		we call small worlds, without observation of bets that are contingent on 
-		the realization of both worlds. We provide a characterization of 
-		subjective expected utility, where choices are made as if there is a 
-		joint distribution over the product of the state  spaces and a joint 
+		the realization of both worlds. We characterize an appropriate version 
+		of subjective expected utility, where choices are made as if there is a 
+		joint distribution over the product of the state spaces and a joint 
 		utility index over pairs of prizes from both prize spaces. Turning to 
-		the identification problem, we show that the joint utility index over 
-		pairs of prizes and the marginal belief over each small world is 
-		identified, but the uniqueness of the joint distribution is more subtle. 
-		If the utility index is separable across prize spaces, then the 
-		correlation across state spaces is unidentified; but if there is any 
-		complementarity across prizes, then the joint distribution is exactly 
-		identified. We apply our analysis to provide behavioral foundations for 
-		independence of the distribution across state spaces. Finally, we 
-		generalize the model to allow for ambiguity about correlations.`,
-		abstractCollapsed: false,
-		note: 'Revise and resubmit at ',
+		identification, the joint utility index over pairs of prizes and the 
+		marginal belief over each small world is identified, but the uniqueness 
+		of the joint distribution is more subtle. If the utility index is 
+		separable across prize spaces, then the correlation across state spaces 
+		is unidentified; but if there is any complementarity across prizes, then 
+		the joint distribution is exactly identified.`,
+		abstractCollapsed: true,
+		note: 'Accepted at ',
 		journal: 'Journal of Economic Theory',
 		image: null,
 	}, {
@@ -64,7 +61,7 @@ app.controller('mainCtrl', function($scope) {
 		increases. We test this choice pattern using the experimental data by 
 		Caplin, Dean, and Martin (2011), and find suggestive evidence in support 
 		of this choice pattern.`,
-		abstractCollapsed: false,
+		abstractCollapsed: true,
 		note: ``,
 		image: {
 			src: 'img/Empirical_CDF.png', 
@@ -101,7 +98,7 @@ app.controller('mainCtrl', function($scope) {
 		are rare events, targeting is essential for achieving welfare gains and 
 		emissions reductions. Auditing a small fraction of wells can have a 
 		large impact when properly targeted.`,
-		abstractCollapsed: false,
+		abstractCollapsed: true,
 		note: ``,
 		image: null,
 	}, {
@@ -126,16 +123,25 @@ app.controller('mainCtrl', function($scope) {
 		subset can yield artificially high effects on multiple outcomes. We 
 		conclude by proposing a measure to prevent such manipulation in field 
 		experiments.`,
-		abstractCollapsed: false,
+		abstractCollapsed: true,
 		note: '',
 		image: null,
 	}, {
-		title: 'Information Design with Background Risk',
-		url: '',
+		title: 'Persuasion and Receiver’s Risk Attitudes',
+		url: 'docs/pdf/Persuasion_Oct_2021.pdf',
 		coauthor: null,
-		abstract: ``,
+		abstract: `This paper studies how the receiver’s risk attitudes affect 
+		the set of implementable outcomes in a persuasion problem. I consider a 
+		two-period consumption model, where the receiver’s future income is 
+		uncertain and he has the option to transfer his wealth intertemporally 
+		through saving. I present a local comparative statics result, showing 
+		that any marginal change in the receiver’s prudence either expands or 
+		shrinks the set of implementable persuasion outcomes. Risk aversion does 
+		not affect persuasion outcomes, except through pivoting the receiver’s 
+		optimal action under the prior belief. Other higher order risk attitudes 
+		have no direct impact on persuasion outcomes.`,
 		abstractCollapsed: true,
-		note: 'draft upon request',
+		note: '',
 		image: null,
 	}];
 
