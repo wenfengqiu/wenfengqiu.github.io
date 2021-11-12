@@ -62,7 +62,7 @@ app.controller('mainCtrl', function($scope) {
 		time leads to better choices. I test this choice pattern using 
 		experimental data from a well-known study and find supportive 
 		evidence.`,
-		abstractCollapsed: false,
+		abstractCollapsed: true,
 		note: ``,
 		image: {
 			src: 'img/Empirical_CDF.png', 
@@ -102,7 +102,7 @@ app.controller('mainCtrl', function($scope) {
 		note: ``,
 		image: null,
 	}, {
-		title: 'Cherry Picking',
+		title: 'Cherry Picking &#127826;',
 		url: 'https://osf.io/preprints/metaarxiv/as9zd/',
 		coauthor: {
 			name: 'Megan Lang',

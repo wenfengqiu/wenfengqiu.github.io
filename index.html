@@ -16,7 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/angular.min.js"></script>
-    <script src="js/main_1.0.18.js"></script>
+    <script src="js/main_1.0.19.js"></script>
     <script src="js/controller_1.0.1.min.js"></script>
 </head>
 <body>
@@ -69,7 +69,7 @@
                     <li class="list-container">
                         <div>
                             <a ng-href="{{paper.url}}" target="_blank" class="list-title" ng-class="{clickable: paper.url}">
-                                {{paper.title}}
+                                <span ng-bind-html="paper.title | to_trusted"></p>
                             </a>
                             <span ng-if="isShowContent(paper.note)">
                                 [{{paper.note}}<a class="italic-text" ng-href="{{paper.journalUrl}}" target="_blank">{{paper.journal}}</a>]
