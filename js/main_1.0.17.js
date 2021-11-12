@@ -38,38 +38,38 @@ app.controller('mainCtrl', function($scope) {
 		abstractCollapsed: true,
 		note: 'Accepted at ',
 		journal: 'Journal of Economic Theory',
+		journalUrl: 'https://www.sciencedirect.com/science/article/pii/S0022053121001848',
 		image: null,
 	}, {
-		title: 'Stochastic Choice from Gradual Attention',
-		url: 'docs/pdf/Stochastic_Choice_Gradual_Attention_Nov29.pdf',
+		title: 'A Choice Model of Gradual Attention',
+		url: 'docs/pdf/A_Choice_Model_of_Gradual_Attention_Oct29_2021.pdf',
 		coauthor: null,
-		abstract: `We propose a novel model of stochastic choices with limited 
-		attention. A consumer evaluates a menu of options sequentially, 
-		following an order that depends on the salience of the options 
-		(called <span class="italic-font">salience order</span>). 
-		Due to the time constraint, the consumer might not be able to evaluate 
-		every option in the menu. The set of options she has evaluated forms her 
-		consideration set and she chooses her most preferred option from the 
-		consideration set. Her evaluation process is modeled by a counting 
-		process. As a consequence, her consideration set and choice can be 
-		stochastic. We provide an axiomatic characterization of this model. 
-		With the rich data containing both the choices and the associated 
-		contemplation time, we show the primitives of the models such as the 
-		salience order and the preference can be uniquely recovered. A key 
-		feature of our model is that the consumer makes better choices (in terms 
-		of first-order stochastic dominance) as her contemplation time 
-		increases. We test this choice pattern using the experimental data by 
-		Caplin, Dean, and Martin (2011), and find suggestive evidence in support 
-		of this choice pattern.`,
-		abstractCollapsed: true,
+		abstract: `Despite a growing interest in choice models with limited 
+		attention, there is a lack of studies modeling limited attention itself. 
+		In this paper, I propose a choice model with gradual attention, in which 
+		a decision maker’s attention is limited due to time constraints. With 
+		richer choice data including the associated decision time, I provide an 
+		axiomatic characterization of this model. I show the model primitives 
+		such as the preference can be uniquely identified. To make the model 
+		comparable to existing choice models with limited attention, I consider 
+		its static version without time data and show identification is not 
+		always possible, which highlights the novelty of utilizing the decision 
+		time information in understanding choice behaviors. I examine 
+		aggregation issues of this model and give necessary and sufficient 
+		conditions for the existence of a representative agent under 
+		heterogeneity. In my model, the decision maker’s consideration set is 
+		growing monotonically as decision time increases. As a consequence, more 
+		time leads to better choices. I test this choice pattern using 
+		experimental data from a well-known study and find supportive 
+		evidence.`,
+		abstractCollapsed: false,
 		note: ``,
 		image: {
 			src: 'img/Empirical_CDF.png', 
 			alt: 'Empirical CDF',
 			description: `Experimental evidence of better choices with more 
 			time: choices in blue first-order stochastically dominates choices 
-			in red. (<span class="italic-font">Data Source</span>: 
-			Caplin, Dean, and Martin (2011))`,
+			in red.`,
 		},
 	}, {
 		title: 'Hard to Measure Well: Can Feasible Policies Reduce Methane Emissions?',
