@@ -99,7 +99,8 @@ app.controller('mainCtrl', function($scope) {
 		emissions reductions. Auditing a small fraction of wells can have a 
 		large impact when properly targeted.`,
 		abstractCollapsed: true,
-		note: ``,
+		note: 'Revise and resubmit at ',
+		journal: 'Journal of the Association of Environmental and Resource Economists',
 		image: null,
 	}, {
 		title: 'Cherry Picking &#127826;',
@@ -123,23 +124,6 @@ app.controller('mainCtrl', function($scope) {
 		subset can yield artificially high effects on multiple outcomes. We 
 		conclude by proposing a measure to prevent such manipulation in field 
 		experiments.`,
-		abstractCollapsed: true,
-		note: '',
-		image: null,
-	}, {
-		title: 'Persuasion and Receiver’s Risk Attitudes',
-		url: 'docs/pdf/Persuasion_Oct_2021.pdf',
-		coauthor: null,
-		abstract: `This paper studies how the receiver’s risk attitudes affect 
-		the set of implementable outcomes in a persuasion problem. I consider a 
-		two-period consumption model, where the receiver’s future income is 
-		uncertain and he has the option to transfer his wealth intertemporally 
-		through saving. I present a local comparative statics result, showing 
-		that any marginal change in the receiver’s prudence either expands or 
-		shrinks the set of implementable persuasion outcomes. Risk aversion does 
-		not affect persuasion outcomes, except through pivoting the receiver’s 
-		optimal action under the prior belief. Other higher order risk attitudes 
-		have no direct impact on persuasion outcomes.`,
 		abstractCollapsed: true,
 		note: '',
 		image: null,

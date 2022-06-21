@@ -6,6 +6,10 @@ i {
     font-style: italic;
 }
 
+.hide {
+    display: none;
+}
+
 /* Navigation Bar */
 
 .header-nav {

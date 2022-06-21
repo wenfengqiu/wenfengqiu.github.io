@@ -9,14 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" href="img/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="css/main_1.0.8.css">
+    <link rel="stylesheet" type="text/css" href="css/main_1.0.9.css">
     <link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/angular.min.js"></script>
-    <script src="js/main_1.0.19.js"></script>
+    <script src="js/main_1.0.20.js"></script>
     <script src="js/controller_1.0.1.min.js"></script>
 </head>
 <body>
@@ -35,7 +35,7 @@
                     <i ng-class="[letter]"></i>
                 </span>
             </a>
-            <a ng-click="current = 'teaching'">
+            <a ng-click="current = 'teaching'" class="hide">
                 <span ng-repeat="letter in headerTeaching track by $index">
                     <i ng-class="[letter]"></i>
                 </span>
@@ -49,9 +49,11 @@
             </div>
             <div class="home-self-introduction">
                 <div class="fullname">Wenfeng Qiu</div>
-                <div>I am a PhD candidate in the Department of Agricultural and Resource Economics at UC Berkeley.</div>
-                <br>
-                <div>My research interests are in microeconomic theory, with focus on decision theory and information economics.</div>
+                <div>
+                  I am a Senior Scientist on the Advertising & Marketing Science 
+                  Team at Sirius XM + Pandora. I received my PhD in Agricultural 
+                  and Resource Economics from UC Berkeley.
+                </div>
                 <br>
                 <br>
                 <br>
@@ -71,11 +73,17 @@
                             <a ng-href="{{paper.url}}" target="_blank" class="list-title" ng-class="{clickable: paper.url}">
                                 <span ng-bind-html="paper.title | to_trusted"></p>
                             </a>
-                            <span ng-if="isShowContent(paper.note)">
-                                [{{paper.note}}<a class="italic-text" ng-href="{{paper.journalUrl}}" target="_blank">{{paper.journal}}</a>]
-                            </span>
                             <div ng-if="isShowContent(paper.coauthor)">
                                 (with <a ng-href="{{paper.coauthor.url}}" target="_blank">{{paper.coauthor.name}}</a>)
+                            </div>
+                            <div ng-if="isShowContent(paper.note)">
+                                [ {{paper.note}}
+                                <a ng-if="paper.journalUrl" class="italic-text" ng-href="{{paper.journalUrl}}" target="_blank">
+                                    {{paper.journal}}
+                                </a>
+                                <span ng-if="!paper.journalUrl" class="italic-text" ng-href="{{paper.journalUrl}}" target="_blank">
+                                    {{paper.journal}}
+                                </span>]
                             </div>
                         </div>
                         <div class="abstract" data-toggle="collapse" ng-if="isShowContent(paper.abstract)">
