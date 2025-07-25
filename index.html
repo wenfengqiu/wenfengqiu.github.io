@@ -16,7 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/angular.min.js"></script>
-    <script src="js/main_1.0.20.js"></script>
+    <script src="js/main_1.0.21.js"></script>
     <script src="js/controller_1.0.1.min.js"></script>
 </head>
 <body>
@@ -53,7 +53,7 @@
                   I am a Senior Scientist on the Advertising & Marketing Science 
                   Team at Sirius XM + Pandora. I received my PhD in Agricultural 
                   and Resource Economics from UC Berkeley.
-                  Here is my <a href="docs/pdf/Wenfeng_Qiu_CV_2022.pdf" target="_blank">CV</a>.
+                  Here is my <a href="docs/pdf/Wenfeng_Qiu_Resume_2025.pdf" target="_blank">resume</a>.
                 </div>
                 <br>
                 <br>
@@ -77,7 +77,7 @@
                             <div ng-if="isShowContent(paper.coauthor)">
                                 (with <a ng-href="{{paper.coauthor.url}}" target="_blank">{{paper.coauthor.name}}</a>)
                             </div>
-                            <div ng-if="isShowContent(paper.note)">
+                            <div ng-if="isShowContent(paper.note, paper.journalUrl)">
                                 [ {{paper.note}}
                                 <a ng-if="paper.journalUrl" class="italic-text" ng-href="{{paper.journalUrl}}" target="_blank">
                                     {{paper.journal}}

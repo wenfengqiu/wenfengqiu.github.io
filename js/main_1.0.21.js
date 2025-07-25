@@ -36,9 +36,41 @@ app.controller('mainCtrl', function($scope) {
 		is unidentified; but if there is any complementarity across prizes, then 
 		the joint distribution is exactly identified.`,
 		abstractCollapsed: true,
-		note: 'Accepted at ',
+		note: '',
 		journal: 'Journal of Economic Theory',
 		journalUrl: 'https://www.sciencedirect.com/science/article/pii/S0022053121001848',
+		image: null,
+	}, {
+		title: 'Hard to Measure Well: Can Feasible Policies Reduce Methane Emissions?',
+		url: 'docs/pdf/Karl_Dunkle_Werner_JMP.pdf',
+		coauthor: {
+			name: 'Karl Dunkle Werner',
+			url: 'https://karldw.org',
+		},
+		abstract: `Oil and gas wells emit large quantities of methane, a 
+		greenhouse gas 34 times more potent than carbon dioxide. Methane 
+		emissions are rarely priced and lightly regulated—in part because they 
+		are hard to measure—leading to a large climate externality. However, 
+		measurement technology is improving, with remote sensing and other 
+		techniques opening the door for policy innovation. We present a 
+		theoretical model of emissions abatement at the well level and a range 
+		of feasible policy options, then use data constructed from 
+		cross-sectional scientific studies to estimate abatement costs. We 
+		simulate audit policies under realistic constraints, varying the 
+		information the regulator uses in choosing wells to audit. These 
+		policies become more effective when they can target on well covariates, 
+		detect leaks remotely, and charge higher fees for leaks. We estimate a 
+		policy that audits 1% of wells with uniform probability achieves less 
+		than 1% of the gains of the infeasible first best. Using the same number 
+		of audits targeted on remotely sensed emissions data achieves gains of 
+		30–60% of the first best. These results demonstrate that because leaks 
+		are rare events, targeting is essential for achieving welfare gains and 
+		emissions reductions. Auditing a small fraction of wells can have a 
+		large impact when properly targeted.`,
+		abstractCollapsed: true,
+		note: '',
+		journal: 'Journal of the Association of Environmental and Resource Economists',
+		journalUrl: 'https://www.journals.uchicago.edu/doi/10.1086/732913',
 		image: null,
 	}, {
 		title: 'A Choice Model of Gradual Attention',
@@ -72,37 +104,6 @@ app.controller('mainCtrl', function($scope) {
 			in red.`,
 		},
 	}, {
-		title: 'Hard to Measure Well: Can Feasible Policies Reduce Methane Emissions?',
-		url: 'docs/pdf/Karl_Dunkle_Werner_JMP.pdf',
-		coauthor: {
-			name: 'Karl Dunkle Werner',
-			url: 'https://karldw.org',
-		},
-		abstract: `Oil and gas wells emit large quantities of methane, a 
-		greenhouse gas 34 times more potent than carbon dioxide. Methane 
-		emissions are rarely priced and lightly regulated—in part because they 
-		are hard to measure—leading to a large climate externality. However, 
-		measurement technology is improving, with remote sensing and other 
-		techniques opening the door for policy innovation. We present a 
-		theoretical model of emissions abatement at the well level and a range 
-		of feasible policy options, then use data constructed from 
-		cross-sectional scientific studies to estimate abatement costs. We 
-		simulate audit policies under realistic constraints, varying the 
-		information the regulator uses in choosing wells to audit. These 
-		policies become more effective when they can target on well covariates, 
-		detect leaks remotely, and charge higher fees for leaks. We estimate a 
-		policy that audits 1% of wells with uniform probability achieves less 
-		than 1% of the gains of the infeasible first best. Using the same number 
-		of audits targeted on remotely sensed emissions data achieves gains of 
-		30–60% of the first best. These results demonstrate that because leaks 
-		are rare events, targeting is essential for achieving welfare gains and 
-		emissions reductions. Auditing a small fraction of wells can have a 
-		large impact when properly targeted.`,
-		abstractCollapsed: true,
-		note: 'Revise and resubmit at ',
-		journal: 'Journal of the Association of Environmental and Resource Economists',
-		image: null,
-	}, {
 		title: 'Cherry Picking &#127826;',
 		url: 'https://osf.io/preprints/metaarxiv/as9zd/',
 		coauthor: {
@@ -129,8 +130,8 @@ app.controller('mainCtrl', function($scope) {
 		image: null,
 	}];
 
-	$scope.isShowContent = (content) => {
-		return !!content;
+	$scope.isShowContent = (content, url) => {
+		return !!content || !!url;
 	};
 
 	$scope.isShowComma = (coauthors, idx) => {
